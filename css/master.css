@@ -1,0 +1,36 @@
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* classe clearfix */
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* stile barra laterale */
+aside {
+    height: calc(100vh - 80px); /* calcolo altezza aside meno altezza footer */
+    width: 200px;
+    float: left;
+    background-color: black;
+}
+
+/* stile main */
+main {
+    height: calc(100vh - 80px); /* calcolo altezza main meno altezza footer */
+    width: calc(100vw - 200px); /* calcolo larghezza main meno larghezza aside */
+    background-color: rgb(29, 26, 37);
+    overflow-y: auto;
+}
+
+/* stile footer */
+footer {
+    background-color: gray;
+    height: 80px;
+    width: 100vw;
+}
