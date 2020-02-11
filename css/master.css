@@ -72,7 +72,7 @@ aside h5 {
     border-left: 3px solid rgb(166, 227, 53);
     cursor: pointer;
 }
-
+/* stile elenco-playlist */
 .elenco-playlist { /* stile elenco playlist */
     display: flex;
     flex-direction: column;
@@ -106,7 +106,7 @@ aside h5 {
     color: rgb(166, 227, 53);
     cursor: pointer;
 }
-
+/* stile aside-footer */
 .footer-aside {
     width: 100%;
     padding: 0 20px;
@@ -140,6 +140,7 @@ aside h5 {
     color: rgb(166, 227, 53);
     cursor: pointer;
 }
+
 /* stile main */
 main {
     height: calc(100vh - 80px);
@@ -156,5 +157,60 @@ footer {
     width: 100%;
     position: fixed;
     bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
 
+.comandi-riproduzione {
+    text-align: center;
+}
+
+.comandi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comandi i {
+    font-size: 15px;
+    padding: 0 10px;
+}
+
+.comandi i:hover {
+    color: rgb(166, 227, 53);
+    cursor: pointer;
+}
+
+.far.fa-play-circle {
+    font-size: 30px;
+}
+
+
+/* creazione barra di progresso */
+.progress-bar {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+}
+#progress {
+    background: rgb(105, 104, 104);
+    border-radius: 10px;
+    height: 4px;
+    width: 300px;
+}
+
+#progress:after {
+    content: '';
+    display: block;
+    background: #ececec;
+    width: 50%;
+    height: 100%;
+    border-radius: 9px;
+}
+
+.progress-bar span {
+    font-size: 10px;
+    padding: 0 20px;
 }
