@@ -8,7 +8,7 @@
 body { /* stile font a tutto il body */
     font-family: 'Montserrat', sans-serif;
     background-color: black;
-    color: rgba(69, 68, 65, 0.86);
+    color: rgba(92, 91, 88, 0.86);
 }
 /* classe clearfix */
 .clearfix::after {
@@ -20,19 +20,22 @@ body { /* stile font a tutto il body */
 .container-flex {
     display: flex;
 }
+
 /* stile barra laterale */
 aside {
-    height: 100vh;
+    height: calc(100vh - 80px);
     width: 200px;
     float: left;
     background-color: black;
     font-size: 20px;
+    position: relative;
 }
 
 aside .container-flex {
     flex-direction: column;
 }
-#logo, .icone-navigazione {
+
+#logo, .icone-navigazione { /*stile logo*/
     display: flex;
     align-items: center;
     padding: 5px 0 5px 20px;
@@ -49,23 +52,97 @@ aside .container-flex {
     font-size: 40px;
 }
 
-aside h2,
-aside h6 {
+aside #logo h2,
+aside .navbar h6 {
     padding-left: 5px;
+}
+
+aside h2,
+aside h6,
+aside h5 {
     font-weight: 600;
 }
 
 .contenitore-icone {
     width: 25px;
 }
-
+/* effetto on over navbar */
 .icone-navigazione:hover {
     color: white;
     border-left: 3px solid rgb(166, 227, 53);
+    cursor: pointer;
+}
+
+.elenco-playlist { /* stile elenco playlist */
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 0 20px;
+}
+
+.elenco-playlist h5 {
+    font-size: 15px;
+    color: white;
+}
+
+.nome-playlist {
+    padding: 10px 0;
+}
+
+#crea-playlist {
+    display: flex;
+    align-items: center;
+}
+
+.fas.fa-plus-square {
+    font-size: 30px;
+    padding-right: 5px;
+}
+
+.nome-playlist:hover {
+    color: white;
+}
+
+.nome-playlist i:hover {
+    color: rgb(166, 227, 53);
+    cursor: pointer;
+}
+
+.footer-aside {
+    width: 100%;
+    padding: 0 20px;
+    font-size: 12px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.install-app {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(92, 91, 88, 0.86);
+}
+
+.install-app:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.user {
+    color: lightgray;
+    padding: 10px 0 5px;
+}
+
+.user i{
+    font-size: 20px;
+}
+
+.user:hover {
+    color: rgb(166, 227, 53);
+    cursor: pointer;
 }
 /* stile main */
 main {
-    height: 100vh;
+    height: calc(100vh - 80px);
     width: calc(100% - 200px); /* calcolo larghezza main meno larghezza aside */
     float: left;
     background-color: rgb(29, 26, 37);
