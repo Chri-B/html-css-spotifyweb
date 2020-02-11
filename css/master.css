@@ -10,6 +10,7 @@ body { /* stile font a tutto il body */
     background-color: black;
     color: rgb(105, 104, 104);
 }
+
 /* classe clearfix */
 .clearfix::after {
     content: '';
@@ -19,6 +20,15 @@ body { /* stile font a tutto il body */
 
 .container-flex {
     display: flex;
+}
+
+section {
+    padding: 30px 10px 0;
+}
+
+section h2 {
+    color: white;
+    padding-bottom: 20px;
 }
 
 /* stile barra laterale */
@@ -66,12 +76,14 @@ aside h5 {
 .contenitore-icone {
     width: 25px;
 }
+
 /* effetto on over navbar */
 .icone-navigazione:hover {
     color: white;
     border-left: 3px solid rgb(166, 227, 53);
     cursor: pointer;
 }
+
 /* stile elenco-playlist */
 .elenco-playlist { /* stile elenco playlist */
     display: flex;
@@ -106,6 +118,7 @@ aside h5 {
     color: rgb(166, 227, 53);
     cursor: pointer;
 }
+
 /* stile aside-footer */
 .footer-aside {
     width: 100%;
@@ -143,6 +156,11 @@ aside h5 {
     cursor: pointer;
 }
 
+
+
+
+
+
 /* stile main */
 main {
     height: calc(100vh - 80px);
@@ -151,6 +169,94 @@ main {
     background-color: rgb(29, 26, 37);
     overflow-y: auto;
 }
+
+/* stile overlay */
+.overlay-top {
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.71);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.overlay-top > div button a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-upgrade {
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.71);
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+.btn-upgrade:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.btn-upgrade:hover a {
+    color: rgb(166, 227, 53);
+}
+
+/* stilizzazione menu main */
+.menu {
+    text-transform: uppercase;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu ul li {
+    list-style: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu ul li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.menu ul li .linea {
+    transition: 1s;
+}
+
+.menu ul li {
+    transition: 1s;
+}
+
+.menu ul li:hover .linea {
+    opacity: 1;
+}
+
+.linea {
+    text-align: center;
+    height: 2px;
+    width: 40%;
+    border: 1px solid rgb(166, 227, 53);
+    opacity: 0;
+}
+
+/* stile recently-played */
+.card-affiancate {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
 
 /* stile footer */
 footer {
