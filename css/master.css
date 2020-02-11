@@ -8,7 +8,7 @@
 body { /* stile font a tutto il body */
     font-family: 'Montserrat', sans-serif;
     background-color: black;
-    color: rgba(92, 91, 88, 0.86);
+    color: rgb(105, 104, 104);
 }
 /* classe clearfix */
 .clearfix::after {
@@ -115,11 +115,13 @@ aside h5 {
     position: absolute;
     bottom: 0;
     left: 0;
+    background-color: black;
+    z-index: 99;
 }
 
 .install-app {
     padding: 10px 0;
-    border-bottom: 1px solid rgba(92, 91, 88, 0.86);
+    border-bottom: 1px solid rgb(105, 104, 104);
 }
 
 .install-app:hover {
@@ -163,6 +165,44 @@ footer {
     color: white;
 }
 
+footer i:hover {
+    color: rgb(166, 227, 53);
+    cursor: pointer;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+/* stile dettagli brano in riproduzione */
+.playing-song {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.playing-song img {
+    width: 50px;
+}
+
+.titolo-brano {
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.autore-brano {
+    padding-left: 10px;
+    font-size: 10px;
+    color: rgb(105, 104, 104);
+}
+
+.far.fa-heart {
+    padding: 0 10px;
+}
+/* stile comandi riproduzione */
 .comandi-riproduzione {
     text-align: center;
 }
@@ -178,22 +218,16 @@ footer {
     padding: 0 10px;
 }
 
-.comandi i:hover {
-    color: rgb(166, 227, 53);
-    cursor: pointer;
-}
-
 .far.fa-play-circle {
     font-size: 30px;
 }
-
-
 /* creazione barra di progresso */
 .progress-bar {
     display: flex;
     align-items: center;
     padding-top: 5px;
 }
+
 #progress {
     background: rgb(105, 104, 104);
     border-radius: 10px;
@@ -205,7 +239,7 @@ footer {
     content: '';
     display: block;
     background: #ececec;
-    width: 50%;
+    width: 50%; /* percentuale progressione brano */
     height: 100%;
     border-radius: 9px;
 }
@@ -213,4 +247,39 @@ footer {
 .progress-bar span {
     font-size: 10px;
     padding: 0 20px;
+}
+
+#progress:hover {
+    cursor: pointer;
+}
+/* stile barra volume e comandi output */
+.comandi-output {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.comandi-output i {
+    font-size: 12px;
+    padding: 10px;
+}
+
+#volume-bar:hover {
+    cursor: pointer;
+}
+
+#volume-bar {
+    background: rgb(105, 104, 104);
+    border-radius: 10px;
+    height: 4px;
+    width: 80px;
+}
+
+#volume-bar:after {
+    content: '';
+    display: block;
+    background: #ececec;
+    width: 30%; /* percentuale volume */
+    height: 100%;
+    border-radius: 9px;
 }
