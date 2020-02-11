@@ -4,17 +4,50 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial">
         <title>Spotify Web</title>
+        <script src="https://kit.fontawesome.com/b125f3be7d.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/master.css">
     </head>
     <body>
-        <aside></aside>    <!-- SideBar, fissa -->
-        <main>    <!-- Container principale -->
-            <div class="overlay-top"></div>    <!-- barra overlay trasparente con bottone -->
-            <section class="recently-played"></section>    <!-- sezione recently played -->
-            <section class="created-for"></section>    <!-- sezione created-for -->
-            <section class="popular"></section>    <!-- sezione popular -->
-            <section class="recommended-playlist"></section>    <!-- sezione recommendend playlist -->
-        </main>
-        <footer></footer>    <!-- Barra di riproduzione contenuti, fissa -->
-    </body>
+        <div class="clearfix">
+            <aside>    <!-- SideBar, fissa -->
+                <div class="container-flex">
+                    <div id="logo">
+                        <i class="fab fa-spotify"></i>
+                        <h2>Spotify</h2>
+                    </div>
+                    <div class="navbar">
+                        <div class="icone-navigazione">
+                            <div class="contenitore-icone">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h6>Home</h6>
+                        </div>
+                        <div class="icone-navigazione">
+                            <div class="contenitore-icone">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h6>Cerca</h6>
+                        </div>
+                        <div class="icone-navigazione">
+                            <div class="contenitore-icone">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h6>La tua libreria</h6>
+                        </div>
+                    </div>
+                    <div class="elenco-playlist"></div>
+                    <div class="footer-aside"></div>
+                </div>
+            </aside>
+            <main>    <!-- Container principale -->
+                <div class="overlay-top"></div>    <!-- barra overlay trasparente con bottone -->
+                <section class="recently-played"></section>    <!-- sezione recently played -->
+                <section class="created-for"></section>    <!-- sezione created-for -->
+                <section class="popular"></section>    <!-- sezione popular -->
+                <section class="recommended-playlist"></section>    <!-- sezione recommendend playlist -->
+            </main>
+            <footer></footer>    <!-- Barra di riproduzione contenuti, fissa -->
+        </div>
+        </body>
 </html>
