@@ -7,7 +7,6 @@
 
 body { /* stile font a tutto il body */
     font-family: 'Montserrat', sans-serif;
-    background-color: black;
     color: rgb(105, 104, 104);
 }
 
@@ -18,7 +17,7 @@ body { /* stile font a tutto il body */
     clear: both;
 }
 
-.container-flex {
+.flex {
     display: flex;
 }
 
@@ -31,128 +30,190 @@ section h2 {
     padding-bottom: 20px;
 }
 
+
+
+
+
+
 /* stile barra laterale */
 aside {
     height: calc(100vh - 80px);
-    width: 200px;
+    width: 50px;
     float: left;
     background-color: black;
     font-size: 20px;
-    position: relative;
     overflow-y: auto;
+    text-align: center;
 }
 
-#logo, .icone-navigazione { /*posizionamento logo*/
-    display: flex;
-    align-items: center;
-    padding: 5px 0 5px 20px;
+aside .flex {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #logo {
-    padding: 20px 0 0 20px;
-    font-size: 15px;
-    margin-bottom: 20px;
     color: white;
     background-color: rgba(0, 0, 0, 0.65);
-    position: sticky;
-    top: 0;
 }
 
 #logo i {
     font-size: 40px;
-}
-
-aside #logo h2,
-aside .navbar h6 {
-    padding-left: 5px;
-}
-
-aside h2,
-aside h6,
-aside h5 {
-    font-weight: 600;
-}
-
-.contenitore-icone {
-    width: 25px;
-}
-
-/* effetto on over navbar */
-.icone-navigazione:hover {
-    color: white;
-    border-left: 3px solid rgb(166, 227, 53);
-    cursor: pointer;
-}
-
-/* stile elenco-playlist */
-.elenco-playlist { /* stile elenco playlist */
-    padding: 20px 0 0 20px;
-}
-
-.elenco-playlist h5 {
-    font-size: 15px;
-    color: white;
-}
-
-.nome-playlist {
-    padding: 10px 0;
-}
-
-#crea-playlist {
-    display: flex;
-    align-items: center;
-}
-
-.fas.fa-plus-square {
-    font-size: 30px;
-    padding-right: 5px;
-}
-
-.nome-playlist:hover {
-    color: white;
-}
-
-.nome-playlist i:hover {
-    color: rgb(166, 227, 53);
-    cursor: pointer;
+    padding: 20px 0;
 }
 
 /* stile aside-footer */
-.footer-aside {
-    width: 200px;
-    padding: 0 20px;
-    font-size: 12px;
-    font-weight: 600;
-    background-color: rgba(0, 0, 0, 0.65);
-    position: fixed;
-    bottom: 80px;
-}
-
-.install-app {
-    padding: 10px 0;
-    border-bottom: 1px solid rgb(105, 104, 104);
-}
-
-.install-app:hover {
-    color: white;
-    cursor: pointer;
-}
-
 .user {
     color: lightgray;
-    padding: 10px 0 5px;
+    padding: 20px 0;
 }
 
 .user i{
-    font-size: 20px;
+    color: lightgray;
+    font-size: 30px;
 }
 
-.user:hover {
-    color: rgb(166, 227, 53);
-    cursor: pointer;
+@media screen and (max-width: 767px) {
+    #logo h2 {
+        display: none;
+    }
+
+    .navbar h6 {
+        display: none;
+    }
+
+    .elenco-playlist {
+        display: none;
+    }
+
+    .footer-aside span {
+        display: none;
+    }
 }
 
+@media screen and (min-width: 768px) {
+    aside {
+        width: 200px;
+        text-align: left;
+    }
 
+    aside .flex {
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #logo, .icone-navigazione { /*posizionamento logo*/
+        display: flex;
+        align-items: center;
+        padding: 5px 0 5px 20px;
+    }
+
+    #logo {
+        padding: 20px 0 0 20px;
+        font-size: 15px;
+        margin-bottom: 20px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.65);
+        position: sticky;
+        top: 0;
+    }
+
+    #logo i {
+        font-size: 40px;
+    }
+
+    aside #logo h2,
+    aside .navbar h6 {
+        padding-left: 5px;
+    }
+
+    aside h2,
+    aside h6,
+    aside h5 {
+        font-weight: 600;
+    }
+
+    .contenitore-icone {
+        width: 25px;
+    }
+
+    /* effetto on over navbar */
+    .icone-navigazione:hover {
+        color: white;
+        border-left: 3px solid rgb(166, 227, 53);
+        cursor: pointer;
+    }
+
+    /* stile elenco-playlist */
+    .elenco-playlist { /* stile elenco playlist */
+        padding: 20px 0 0 20px;
+    }
+
+    .elenco-playlist h5 {
+        font-size: 15px;
+        color: white;
+    }
+
+    .nome-playlist {
+        padding: 10px 0;
+    }
+
+    #crea-playlist {
+        display: flex;
+        align-items: center;
+    }
+
+    .fas.fa-plus-square {
+        font-size: 30px;
+        padding-right: 5px;
+    }
+
+    .nome-playlist:hover {
+        color: white;
+    }
+
+    .nome-playlist i:hover {
+        color: rgb(166, 227, 53);
+        cursor: pointer;
+    }
+
+    /* stile aside-footer */
+    .footer-aside {
+        padding: 0 20px;
+        font-size: 12px;
+        font-weight: 600;
+        background-color: rgba(0, 0, 0, 0.65);
+    }
+
+    .install-app {
+        padding: 10px 0;
+        border-bottom: 1px solid rgb(105, 104, 104);
+    }
+
+    .install-app:hover {
+        color: white;
+        cursor: pointer;
+    }
+
+    .user {
+        display: flex;
+        align-items: center;
+        color: lightgray;
+        padding: 10px 0 5px;
+    }
+
+    .user i{
+        font-size: 20px;
+        padding-right: 10px;
+    }
+
+    .user:hover {
+        color: rgb(166, 227, 53);
+        cursor: pointer;
+    }
+
+}
 
 
 
@@ -160,10 +221,16 @@ aside h5 {
 /* stile main */
 main {
     height: calc(100vh - 80px);
-    width: calc(100% - 200px); /* calcolo larghezza main meno larghezza aside */
+    width: calc(100% - 50px); /* calcolo larghezza main meno larghezza aside */
     float: left;
     background-color: rgb(29, 26, 37);
     overflow-y: auto;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        width: calc(100% - 200px)
+    }
 }
 
 /* stile overlay */
@@ -246,16 +313,27 @@ main {
     opacity: 0;
 }
 
-/* stile cards */
+/* stile cards per XS ed SM*/
 .cards-affiancate {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
-
 .card {
     text-align: center;
-    padding-right: 30px;
-    padding-bottom: 20px;
+    width: 50%;
+    padding: 0 20px 20px;
+}
+/* media query per screen da SM */
+@media screen and (min-width: 992px) {
+    .cards-affiancate {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .card {
+        width: auto;
+    }
 }
 
 .card img {
