@@ -246,7 +246,7 @@ main {
     opacity: 0;
 }
 
-/* stile recently-played */
+/* stile cards */
 .cards-affiancate {
     display: flex;
     flex-wrap: wrap;
@@ -254,10 +254,14 @@ main {
 
 .card {
     text-align: center;
+    padding-right: 30px;
+    padding-bottom: 20px;
 }
 
 .card img {
-    width: 150px;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
 }
 
 .card h4 {
@@ -268,6 +272,16 @@ main {
     font-size: 12px;
     padding-top: 5px;
 }
+
+.rotonda img {
+    border-radius: 50%;
+}
+
+
+
+
+
+
 /* stile footer */
 footer {
     background-color: rgb(47, 46, 48);
