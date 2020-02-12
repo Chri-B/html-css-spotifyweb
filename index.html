@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Spotify Web</title>
         <script src="https://kit.fontawesome.com/b125f3be7d.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
@@ -11,68 +11,63 @@
     <body>
         <div class="clearfix">
             <aside>    <!-- SideBar, fissa -->
-                <div class="container-flex">
-                    <div id="logo">
-                        <i class="fab fa-spotify"></i>
-                        <h2>Spotify</h2>
+                <div id="logo">
+                    <i class="fab fa-spotify"></i>
+                    <h2>Spotify</h2>
+                </div>
+                <div class="navbar">
+                    <div class="icone-navigazione">
+                        <div class="contenitore-icone">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h6>Home</h6>
                     </div>
-                    <div class="navbar">
-                        <div class="icone-navigazione">
-                            <div class="contenitore-icone">
-                                <i class="fas fa-home"></i>
-                            </div>
-                            <h6>Home</h6>
+                    <div class="icone-navigazione">
+                        <div class="contenitore-icone">
+                            <i class="fas fa-search"></i>
                         </div>
-                        <div class="icone-navigazione">
-                            <div class="contenitore-icone">
-                                <i class="fas fa-search"></i>
-                            </div>
-                            <h6>Cerca</h6>
-                        </div>
-                        <div class="icone-navigazione">
-                            <div class="contenitore-icone">
-                                <i class="fas fa-book"></i>
-                            </div>
-                            <h6>La tua libreria</h6>
-                        </div>
+                        <h6>Cerca</h6>
                     </div>
-                    <div class="elenco-playlist">
-                        <h5>PLAYLIST</h5>
-                        <div id="crea-playlist" class="nome-playlist">
-                            <i class="fas fa-plus-square"></i>
-                            <h6>Crea Playlist</h6>
+                    <div class="icone-navigazione">
+                        <div class="contenitore-icone">
+                            <i class="fas fa-book"></i>
                         </div>
-                        <div class="nome-playlist">
-                            <h6>Nome Playlist</h6>
-                        </div>
-                        <div class="nome-playlist">
-                            <h6>Nome Playlist</h6>
-                        </div>
-                        <div class="nome-playlist">
-                            <h6>Nome Playlist</h6>
-                        </div>
-                        <div class="nome-playlist">
-                            <h6>Nome Playlist</h6>
-                        </div>
-                        <div class="nome-playlist">
-                            <h6>Nome Playlist</h6>
-                        </div>
-                        <div class="nome-playlist">
-                            <h6>Nome Playlist</h6>
-                        </div>
-                        <div class="nome-playlist">
-                            <h6>Nome Playlist</h6>
-                        </div>
+                        <h6>La tua libreria</h6>
                     </div>
-                    <div class="footer-aside">
-                        <div class="install-app">
-                            <i class="far fa-arrow-alt-circle-down"></i>
-                            <span>Installa app</span>
-                        </div>
-                        <div class="user">
-                            <i class="fas fa-user-circle"></i>
-                            <span>Chri B</span>
-                        </div>
+                </div>
+                <div class="elenco-playlist">
+                    <h5>PLAYLIST</h5>
+                    <div id="crea-playlist" class="nome-playlist">
+                        <i class="fas fa-plus-square"></i>
+                        <h6>Crea Playlist</h6>
+                    </div>
+                    <div class="nome-playlist">
+                        <h6>Nome Playlist</h6>
+                    </div>
+                    <div class="nome-playlist">
+                        <h6>Nome Playlist</h6>
+                    </div>
+                    <div class="nome-playlist">
+                        <h6>Nome Playlist</h6>
+                    </div>
+                    <div class="nome-playlist">
+                        <h6>Nome Playlist</h6>
+                    </div>
+                    <div class="nome-playlist">
+                        <h6>Nome Playlist</h6>
+                    </div>
+                    <div class="nome-playlist">
+                        <h6>Nome Playlist</h6>
+                    </div>
+                </div>
+                <div class="footer-aside">
+                    <div class="install-app">
+                        <i class="far fa-arrow-alt-circle-down"></i>
+                        <span>Installa app</span>
+                    </div>
+                    <div class="user">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Chri B</span>
                     </div>
                 </div>
             </aside>
@@ -114,11 +109,14 @@
                     <h2>Recently played</h2>
                     <div class="cards-affiancate">
                         <div class="card">
-                            <img src="" alt="">
-                            <h4></h4>
-                            <p></p>
+                            <div class="card-preview">
+                                <img src="https://cdn.pinkvilla.com/files/styles/contentpreview/public/iron-man-phase-4_0.jpg?itok=X0sQ_QHs" alt="mix">
+                            </div>
+                            <div class="testo-card">
+                                <h4>Iron Man</h4>
+                                <p>Tony Stark</p>
+                            </div>
                         </div>
-
                     </div>
                 </section>
                 <section class="created-for"></section>    <!-- sezione created-for -->

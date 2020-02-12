@@ -23,7 +23,7 @@ body { /* stile font a tutto il body */
 }
 
 section {
-    padding: 30px 10px 0;
+    padding: 30px 20px 0;
 }
 
 section h2 {
@@ -39,13 +39,10 @@ aside {
     background-color: black;
     font-size: 20px;
     position: relative;
+    overflow-y: auto;
 }
 
-aside .container-flex {
-    flex-direction: column;
-}
-
-#logo, .icone-navigazione { /*stile logo*/
+#logo, .icone-navigazione { /*posizionamento logo*/
     display: flex;
     align-items: center;
     padding: 5px 0 5px 20px;
@@ -56,6 +53,9 @@ aside .container-flex {
     font-size: 15px;
     margin-bottom: 20px;
     color: white;
+    background-color: rgba(0, 0, 0, 0.65);
+    position: sticky;
+    top: 0;
 }
 
 #logo i {
@@ -86,8 +86,6 @@ aside h5 {
 
 /* stile elenco-playlist */
 .elenco-playlist { /* stile elenco playlist */
-    display: flex;
-    flex-direction: column;
     padding: 20px 0 0 20px;
 }
 
@@ -121,15 +119,13 @@ aside h5 {
 
 /* stile aside-footer */
 .footer-aside {
-    width: 100%;
+    width: 200px;
     padding: 0 20px;
     font-size: 12px;
     font-weight: 600;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: black;
-    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.65);
+    position: fixed;
+    bottom: 80px;
 }
 
 .install-app {
@@ -173,7 +169,7 @@ main {
 /* stile overlay */
 .overlay-top {
     height: 80px;
-    background-color: rgba(0, 0, 0, 0.71);
+    background-color: rgba(0, 0, 0, 0.65);
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -251,13 +247,27 @@ main {
 }
 
 /* stile recently-played */
-.card-affiancate {
+.cards-affiancate {
     display: flex;
     flex-wrap: wrap;
 }
 
+.card {
+    text-align: center;
+}
 
+.card img {
+    width: 150px;
+}
 
+.card h4 {
+    color: white;
+}
+
+.card p {
+    font-size: 12px;
+    padding-top: 5px;
+}
 /* stile footer */
 footer {
     background-color: rgb(47, 46, 48);
