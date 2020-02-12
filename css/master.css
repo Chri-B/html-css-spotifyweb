@@ -220,6 +220,43 @@ aside .flex {
         cursor: pointer;
     }
 
+    /* stile overlay su card */
+    .card-preview {
+        position: relative;
+    }
+
+    .card-preview i {
+        position: absolute;
+        font-size: 80px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        opacity: 0;
+    }
+
+    .overlay-card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.50);
+        opacity: 0;
+    }
+
+    .overlay-rotondo {
+        border-radius: 50%;
+    }
+
+    .card-preview:hover .overlay-card {
+        opacity: 1;
+    }
+    .card-preview:hover i {
+        opacity: 1;
+        cursor: pointer;
+    }
+
 }
 
 
@@ -433,7 +470,7 @@ footer a:hover {
     padding: 0 10px;
 }
 
-.far.fa-play-circle {
+.comandi-riproduzione .comandi .far.fa-play-circle {
     font-size: 30px;
 }
 /* creazione barra di progresso */
