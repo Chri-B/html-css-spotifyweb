@@ -77,6 +77,33 @@ aside .flex {
     font-size: 30px;
 }
 
+
+
+/* stile overlay su card */
+.card-preview {
+    position: relative;
+}
+
+.card-preview i {
+    position: absolute;
+    font-size: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0;
+}
+
+.overlay-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.50);
+    opacity: 0;
+}
+
 @media screen and (max-width: 767px) {
     #logo h2 {
         display: none;
@@ -218,31 +245,6 @@ aside .flex {
     .user:hover {
         color: rgb(166, 227, 53);
         cursor: pointer;
-    }
-
-    /* stile overlay su card */
-    .card-preview {
-        position: relative;
-    }
-
-    .card-preview i {
-        position: absolute;
-        font-size: 80px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        opacity: 0;
-    }
-
-    .overlay-card {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.50);
-        opacity: 0;
     }
 
     .overlay-rotondo {
