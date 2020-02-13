@@ -30,11 +30,6 @@ section h2 {
     padding-bottom: 20px;
 }
 
-
-
-
-
-
 /* stile barra laterale */
 aside {
     height: calc(100vh - 80px);
@@ -77,8 +72,6 @@ aside .flex {
     font-size: 30px;
 }
 
-
-
 /* stile overlay su card */
 .card-preview {
     position: relative;
@@ -86,7 +79,7 @@ aside .flex {
 
 .card-preview i {
     position: absolute;
-    font-size: 80px;
+    font-size: 70px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -94,34 +87,20 @@ aside .flex {
     opacity: 0;
 }
 
-.overlay-card {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.50);
-    opacity: 0;
+.card-preview img:hover {
+    filter: opacity(0.3); /* opacità su card con un filtro, quando si va su play l'immagine torna opacità 1 */
 }
 
 @media screen and (max-width: 767px) {
-    #logo h2 {
-        display: none;
-    }
-
-    .navbar h6 {
-        display: none;
-    }
-
-    .elenco-playlist {
-        display: none;
-    }
-
+    #logo h2,
+    .navbar h6,
+    .elenco-playlist,
     .footer-aside span {
         display: none;
     }
 }
 
+/* stile icone e testi per visualizzazione sopra i 768px */
 @media screen and (min-width: 768px) {
     aside {
         width: 200px;
@@ -237,7 +216,7 @@ aside .flex {
         padding: 10px 0 5px;
     }
 
-    .user i{
+    .user i {
         font-size: 20px;
         padding-right: 10px;
     }
@@ -246,19 +225,6 @@ aside .flex {
         color: rgb(166, 227, 53);
         cursor: pointer;
     }
-
-    .overlay-rotondo {
-        border-radius: 50%;
-    }
-
-    .card-preview:hover .overlay-card {
-        opacity: 1;
-    }
-    .card-preview:hover i {
-        opacity: 1;
-        cursor: pointer;
-    }
-
 }
 
 
@@ -276,6 +242,20 @@ main {
 @media screen and (min-width: 768px) {
     main {
         width: calc(100% - 200px)
+    }
+
+    .card-preview:hover .overlay-card {
+        opacity: 1;
+    }
+
+    .card-preview:hover .play-card i {
+        opacity: 1;
+        cursor: pointer;
+        z-index: 5;
+    }
+
+    .overlay-rotondo {
+        border-radius: 50%;
     }
 }
 
@@ -365,11 +345,13 @@ main {
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .card {
     text-align: center;
     width: 50%;
     padding: 0 20px 20px;
 }
+
 /* media query per screen da SM */
 @media screen and (min-width: 992px) {
     .cards-affiancate {
@@ -377,6 +359,7 @@ main {
         flex-wrap: wrap;
         justify-content: flex-start;
     }
+
     .card {
         width: auto;
     }
@@ -400,11 +383,6 @@ main {
 .rotonda img {
     border-radius: 50%;
 }
-
-
-
-
-
 
 /* stile footer */
 footer {
