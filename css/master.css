@@ -30,7 +30,7 @@ section h2 {
     padding-bottom: 20px;
 }
 
-/* stile barra laterale */
+/* INIZIO STILE ASIDE */
 aside {
     height: calc(100vh - 80px);
     width: 50px;
@@ -91,6 +91,7 @@ aside .flex {
     filter: opacity(0.3); /* opacità su card con un filtro, quando si va su play l'immagine torna opacità 1 */
 }
 
+/* media query per modifica navbar laterale */
 @media screen and (max-width: 767px) {
     #logo h2,
     .navbar h6,
@@ -226,11 +227,9 @@ aside .flex {
         cursor: pointer;
     }
 }
+/* FINE STILE ASIDE */
 
-
-
-
-/* stile main */
+/* INIZIO STILE MAIN */
 main {
     height: calc(100vh - 80px);
     width: calc(100% - 50px); /* calcolo larghezza main meno larghezza aside */
@@ -256,6 +255,26 @@ main {
 
     .overlay-rotondo {
         border-radius: 50%;
+    }
+}
+
+/* media query per evitare sovrapposizine card in schermi troppo piccoli */
+@media screen and (max-width: 574px) {
+    main .card {
+        width: 100%;
+    }
+}
+
+/* media query per screen da SM */
+@media screen and (min-width: 992px) {
+    .cards-affiancate {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .card {
+        width: auto;
     }
 }
 
@@ -352,19 +371,6 @@ main {
     padding: 0 20px 20px;
 }
 
-/* media query per screen da SM */
-@media screen and (min-width: 992px) {
-    .cards-affiancate {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-
-    .card {
-        width: auto;
-    }
-}
-
 .card img {
     width: 200px;
     height: 200px;
@@ -383,8 +389,9 @@ main {
 .rotonda img {
     border-radius: 50%;
 }
+/* FINE STILE MAIN */
 
-/* stile footer */
+/* INIZIO STILE FOOTER */
 footer {
     background-color: rgb(47, 46, 48);
     height: 80px;
@@ -409,6 +416,7 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
 /* stile dettagli brano in riproduzione */
 .playing-song {
     margin-left: 10px;
@@ -484,6 +492,7 @@ footer a:hover {
 #progress:hover {
     cursor: pointer;
 }
+
 /* stile barra volume e comandi output */
 .comandi-output {
     display: flex;
@@ -515,3 +524,13 @@ footer a:hover {
     height: 100%;
     border-radius: 9px;
 }
+
+/* media query per evitare sovrapposizine icone nel footer */
+@media screen and (max-width: 574px) {
+    .playing-song i,
+    .comandi-output .fas.fa-list-ul,
+    .comandi-output .fas.fa-tv {
+        display: none;
+    }
+}
+/* FINE STILE FOOTER */
