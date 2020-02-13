@@ -87,10 +87,6 @@ aside .flex {
     opacity: 0;
 }
 
-.card-preview img:hover {
-    filter: opacity(0.3); /* opacità su card con un filtro, quando si va su play l'immagine torna opacità 1 */
-}
-
 /* media query per modifica navbar laterale */
 @media screen and (max-width: 767px) {
     #logo h2,
@@ -255,6 +251,10 @@ main {
 
     .overlay-rotondo {
         border-radius: 50%;
+    }
+
+    .card-preview img:hover {
+        filter: opacity(0.3); /* opacità su card con un filtro, quando si va su play l'immagine torna opacità 1 */
     }
 }
 
@@ -530,6 +530,12 @@ footer a:hover {
     .playing-song i,
     .comandi-output .fas.fa-list-ul,
     .comandi-output .fas.fa-tv {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 409px) {
+    footer .playing-song .testo-brano {
         display: none;
     }
 }
